@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="Certificado"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Landscape"
+		 pageWidth="842"
+		 pageHeight="595"
+		 columnWidth="782"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<queryString><![CDATA[SELECT * FROM certificado_view WHERE cd_aluno = 74 AND cd_curso = 21;]]></queryString>
+
+	<field name="cd_aluno" class="java.lang.Long"/>
+	<field name="matricula_aluno" class="java.lang.Long"/>
+	<field name="nm_aluno" class="java.lang.String"/>
+	<field name="cd_curso" class="java.lang.Long"/>
+	<field name="nm_curso" class="java.lang.String"/>
+	<field name="carga_horaria" class="java.lang.Integer"/>
+	<field name="evento" class="java.lang.String"/>
+	<field name="cd_professor" class="java.lang.Long"/>
+	<field name="nm_professor" class="java.lang.String"/>
+	<field name="cd_local" class="java.lang.Long"/>
+	<field name="nm_local" class="java.lang.String"/>
+	<field name="cd_matricula" class="java.lang.Long"/>
+	<field name="dt_inicial" class="java.lang.String"/>
+	<field name="dt_final" class="java.lang.String"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="445"  isSplitAllowed="true" >
+				<image  vAlign="Middle" hAlign="Center" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="782"
+						height="445"
+						key="image-1"/>
+					<box></box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\moise\\Desktop\\Relatório Thoth\\certificado_assinatura.gif"]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="190"
+						y="203"
+						width="404"
+						height="31"
+						key="textField-2"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font pdfFontName="Helvetica-Bold" size="18" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{nm_aluno}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="140"
+						y="234"
+						width="90"
+						height="19"
+						key="staticText-10"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+				<text><![CDATA[Participou do(a)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="230"
+						y="234"
+						width="75"
+						height="19"
+						key="textField-3"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{evento}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="305"
+						y="234"
+						width="27"
+						height="19"
+						key="staticText-11"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+				<text><![CDATA[de]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="332"
+						y="234"
+						width="383"
+						height="19"
+						key="textField-4"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{nm_curso}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="140"
+						y="253"
+						width="182"
+						height="19"
+						key="staticText-12"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+				<text><![CDATA[promovido pelo(a) professor(a)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="322"
+						y="253"
+						width="392"
+						height="19"
+						key="textField-5"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{nm_professor}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="140"
+						y="272"
+						width="75"
+						height="19"
+						key="staticText-13"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+				<text><![CDATA[entre os dias]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="215"
+						y="272"
+						width="73"
+						height="19"
+						key="textField-6"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{dt_inicial}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="288"
+						y="272"
+						width="15"
+						height="19"
+						key="staticText-14"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+				<text><![CDATA[à]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="303"
+						y="272"
+						width="68"
+						height="19"
+						key="textField-7"/>
+					<box></box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{dt_final}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="371"
+						y="272"
+						width="35"
+						height="19"
+						key="staticText-15"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+				<text><![CDATA[no(a)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="406"
+						y="272"
+						width="307"
+						height="19"
+						key="textField-8"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{nm_local}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="140"
+						y="291"
+						width="127"
+						height="19"
+						key="staticText-16"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+				<text><![CDATA[perfazendo um total de ]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="267"
+						y="291"
+						width="21"
+						height="19"
+						key="textField-9"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{carga_horaria}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="288"
+						y="291"
+						width="154"
+						height="19"
+						key="staticText-17"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+				<text><![CDATA[horas complementares]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="245"
+						y="310"
+						width="83"
+						height="18"
+						key="staticText-18"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+				<text><![CDATA[Manaus - AM,]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="328"
+						y="310"
+						width="201"
+						height="19"
+						key="textField-10"/>
+					<box></box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm").format(new Date())]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

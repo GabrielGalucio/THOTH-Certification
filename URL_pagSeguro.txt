@@ -1,0 +1,12 @@
+https://pagseguro.uol.com.br/v2/guia-de-integracao/documentacao-da-biblioteca-pagseguro-em-java.html#!rmcl
+
+
+
+
+EMAIL: moisesmember@gmail.com
+SENHA: Skynetsorry_2018
+FRASE DE SEGURANÇA: A mulher que mais amo nasceu em 15 de agosto de 1926
+
+token=932114
+
+token=932114&referenceId=AQBb5cADShZtb2lzZXNtZW1iZXJAZ21haWwuY29tBjkzMjExNA

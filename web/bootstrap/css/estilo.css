@@ -1,0 +1,32 @@
+h2{
+    text-align: center;    
+};
+
+ul{
+    background: green;
+}
+
+#txt_resumo, #txt_justificativa, #txt_objetivo,
+#txt_metodologia,#txt_ementa, #txt_bibliografia { 
+  height: 100px; 
+}
+
+/* PÕE BARRA DE ROLAGEM VERTICAL NA TABELA */
+.table-overflow {
+    max-height:190px;
+    overflow-y:auto;
+}
+
+#enviar, #bt_anterior{
+    position:absolute; 
+    top:1000%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+#col1_cad_aluno, #col3_cad_aluno{
+    background:#008000;
+    height:550px;
+}
+
+
